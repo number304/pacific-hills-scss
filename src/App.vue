@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <TheLanding :title="title" :subtitle="subtitle" />
+    <TheHeader />
+    <TheLanding />
     <ApartmentList />
   </div>
 </template>
 
 <script>
+import TheHeader from './components/TheHeader.vue'
 import TheLanding from './components/TheLanding.vue'
 import ApartmentList from './components/ApartmentList.vue'
 
 export default {
   name: 'App',
   components: {
+    TheHeader,
     TheLanding,
     ApartmentList,
-  },
-  data() {
-    return {
-      title: 'Wanna live in the coolest city ever?',
-      subtitle: 'Me too, but Peace Hills is alright. Check what appartments are available and come with us!'
-    }
   }
 }
 </script>
 
 <style lang="scss">
+$background-color: #A9FFCB;
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 #app {
@@ -41,8 +45,8 @@ body {
   margin: 0 auto;
   padding: 30px 20px;
 
-  &.green {
-    background-color: #A9FFCB;
+  &.colored {
+    background-color: $background-color;
   }
 }
 </style>

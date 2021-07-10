@@ -1,39 +1,22 @@
 <template>
-  <div class="container green" id="landing-banner">
+  <div class="container" id="landing-banner">
     <div id="landing-content_container">
       <div id="landing-text">
-        <h1>{{ title }}</h1>
-        <p>{{ subtitle }}</p>
+        <h1>Wanna live in the <span>coolest</span> city ever?</h1>
+        <p>Me too, but Peace Hills is alright.</p>
       </div>
-      <img id="city-photo" src="../assets/city-photo.jpg" alt="City photo">
+      <!-- <a href="#" class="">Explore</a> -->
     </div>
   </div>
 </template>
 
 <script>
-// import cityPhoto from '../assets/city-photo.jpg'
-
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
-      type: String,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      // Cause we don't have much budget to take another
-      cityPhotoURL: 'https://images.unsplash.com/photo-1593007221048-141f18cf6ef6?crop=entropy&cs=tinysrgb&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8dG93bnx8fHx8fDE2MjU4ODgwMzE&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600'
-    }
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
 $md-breakpoint: 1024px;
 $sm-breakpoint: 768px;
 
@@ -41,36 +24,41 @@ $sm-breakpoint: 768px;
   padding: 0;
 
   #landing-content_container {
+    align-items: center;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    max-width: 1200px;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
     @media (max-width: $sm-breakpoint) {
       flex-direction: column;
     }
 
     #landing-text {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      position: absolute;
+      color: #094b65;
+      font-size: 10vw;
+      text-align: center;
       padding: 40px;
+      h1 {
+        font-size: 0.4em;
+        span {
+          font-family: 'Mogra', 'Avenir', Helvetica, 'Roboto', sans-serif;
+        }
+      }
+      p {
+        font-size: 0.2em;
+        letter-spacing: 1px;
+        font-weight: 400;
+      }
       @media (max-width: $sm-breakpoint) {
         padding: 20px;
-      }
-    }
-
-    #city-photo {
-      background-size: cover;
-      width: 50%;
-      @media (max-width: $sm-breakpoint) {
-        border: double;
-        border-width: 8px;
-        border-radius: 4px;
-        height: auto;
-        margin: 0 auto 30px auto;
-        max-width: 300px;
-        width: auto;
+        h1 {
+          font-size: 0.8em;
+        }
+        p {
+          font-size: 0.4em;
+        }
       }
     }
 
