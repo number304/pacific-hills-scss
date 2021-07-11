@@ -5,7 +5,7 @@
         <h1>Wanna live in the <span>coolest</span> city ever?</h1>
         <p>Me too, but Peace Hills is alright.</p>
       </div>
-      <!-- <a href="#" class="">Explore</a> -->
+      <a href="#" class="landing-cta">Explore</a>
     </div>
   </div>
 </template>
@@ -19,6 +19,7 @@ export default {}
 
 $md-breakpoint: 1024px;
 $sm-breakpoint: 768px;
+$xs-breakpoint: 420px;
 
 #landing-banner {
   padding: 0;
@@ -35,11 +36,12 @@ $sm-breakpoint: 768px;
     }
 
     #landing-text {
-      position: absolute;
       color: #094b65;
       font-size: 10vw;
-      text-align: center;
       padding: 40px;
+      position: absolute;
+      text-align: center;
+      transform: translateY(-20%);
       h1 {
         font-size: 0.4em;
         span {
@@ -48,17 +50,41 @@ $sm-breakpoint: 768px;
       }
       p {
         font-size: 0.2em;
-        letter-spacing: 1px;
         font-weight: 400;
+        letter-spacing: 1px;
       }
       @media (max-width: $sm-breakpoint) {
-        padding: 20px;
+        padding: 30px;
         h1 {
           font-size: 0.8em;
         }
         p {
           font-size: 0.4em;
         }
+      }
+    }
+
+    .landing-cta {
+      background: #ff0;
+      border-radius: 4px;
+      color: #094b65;
+      display: inline-block;
+      font-size: 1.1em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 8px 30px;
+      text-decoration: none;
+      transform: translateY(80px);
+      @media (max-width: $md-breakpoint) {
+        transform: translateY(60px);
+      }
+      @media (max-width: $sm-breakpoint) {
+        transform: translateY(100px);
+        font-size: 1em;
+      }
+      @media (max-width: $xs-breakpoint) {
+        transform: translateY(60px);
+        font-size: 0.8em;
       }
     }
 

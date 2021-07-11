@@ -38,6 +38,7 @@ $sm-breakpoint: 768px;
     font-size: 2em;
     font-weight: 700;
     text-decoration: none;
+    z-index: 3;
   }
 
   ul {
@@ -45,6 +46,7 @@ $sm-breakpoint: 768px;
     display: flex;
     justify-content: center;
     padding-inline-start: 20px;
+    z-index: 3;
     @media (max-width: $sm-breakpoint) {
       display: none;
     }
