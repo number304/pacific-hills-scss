@@ -25,8 +25,6 @@ export default {
 </script>
 
 <style lang="scss">
-$background-color: #A9FFCB;
-
 * {
   box-sizing: border-box;
 }
@@ -47,9 +45,5 @@ body {
 .container {
   margin: 0 auto;
   padding: 30px 20px;
-
-  &.colored {
-    background-color: $background-color;
-  }
 }
 </style>
