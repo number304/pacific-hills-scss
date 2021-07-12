@@ -53,10 +53,9 @@ export default {
     .apartment-card_cta {
       align-items: center;
       border-radius: 4px;
-      background-color: black;
+      background: #ff0;
       border: none;
       box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
-      color: white;
       cursor: pointer;
       display: inline-flex;
       flex: 0 0 auto;
@@ -68,6 +67,10 @@ export default {
       position: relative;
       text-transform: uppercase;
       user-select: none;
+
+      &:hover {
+        background: #000;
+      }
     }
   }
 }
