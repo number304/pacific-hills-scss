@@ -1,5 +1,5 @@
 # peace-hills-css
-
+A little landing page for a fictional city to documentate my SCSS skills.
 ## Project setup
 ```
 yarn install
