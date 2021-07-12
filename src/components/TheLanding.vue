@@ -18,18 +18,14 @@ export default {
   data() {
     return {
       landingText: null,
-      forest: null,
       button: null,
       rocks: null,
-      lake: null,
     }
   },
   mounted() {
     this.landingText = document.getElementById('landing-text')
-    this.forest = document.getElementById('landing-forest')
     this.button = document.getElementById('landing-cta')
     this.rocks = document.getElementById('landing-rocks')
-    this.lake = document.getElementById('landing-lake')
 
     window.addEventListener('scroll', this.handleScroll)
   },
@@ -73,7 +69,6 @@ $xs-breakpoint: 425px;
     }
 
     #landing-text {
-      color: #094b65;
       font-size: 10vw;
       padding: 40px;
       position: absolute;
@@ -127,14 +122,13 @@ $xs-breakpoint: 425px;
     #landing-cta {
       background: #ff0;
       border-radius: 4px;
-      color: #094b65;
+      color: rgba($color: #000000, $alpha: 0.87);
       display: inline-block;
       font-size: 1.1em;
       font-weight: 700;
       letter-spacing: 1px;
       padding: 12px 20px;
       text-decoration: none;
-      text-transform: uppercase;
       transform: translateY(80px);
       @media (max-width: $md-breakpoint) {
         transform: translateY(60px);

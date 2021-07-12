@@ -5,7 +5,7 @@
       <h2>{{ apartment.name }}</h2>
       <p>{{ apartment.description }}</p>
       <p>{{ apartment.author }}</p>
-      <button class="apartment-card_cta">
+      <button class="apartment-card_cta" @click="wrongDimension">
         Contact
       </button>
     </div>
@@ -18,6 +18,11 @@ export default {
     apartment: {
       type: Object,
       required: true,
+    }
+  },
+  methods: {
+    wrongDimension() {
+      alert('Whoops! You seem to be in a different reality. Sad.')
     }
   }
 }
@@ -53,7 +58,8 @@ export default {
     .apartment-card_cta {
       align-items: center;
       border-radius: 4px;
-      background: #ff0;
+      background: #000;
+      color: white;
       border: none;
       box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
       cursor: pointer;
@@ -69,7 +75,8 @@ export default {
       user-select: none;
 
       &:hover {
-        background: #000;
+        background: #ff0;
+        color: rgba($color: #000000, $alpha: 0.87);
       }
     }
   }

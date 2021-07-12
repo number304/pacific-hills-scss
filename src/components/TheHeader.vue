@@ -34,7 +34,7 @@ $sm-breakpoint: 768px;
   }
 
   .header-logo {
-    color: #094b65;
+    color: rgba($color: #000000, $alpha: 0.87);
     font-size: 2em;
     font-weight: 700;
     text-decoration: none;
@@ -56,13 +56,13 @@ $sm-breakpoint: 768px;
       margin-left: 20px;
 
       a {
-        color: #094b65;
+        color: rgba($color: #000000, $alpha: 0.87);
+        font-weight: 700;
         padding: 6px 15px;
         text-decoration: none;
         &:hover, &.active {
-          background: #094b65;
+          background: #ff0;
           border-radius: 4px;
-          color: white;
         }
       }
     }

@@ -3,6 +3,7 @@
     <TheHeader />
     <TheLanding />
     <ApartmentList />
+    <TheFooter />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import TheHeader from './components/TheHeader.vue'
 import TheLanding from './components/TheLanding.vue'
 import ApartmentList from './components/ApartmentList.vue'
+import TheFooter from './components/TheFooter.vue'
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     TheHeader,
     TheLanding,
     ApartmentList,
+    TheFooter
   }
 }
 </script>
